@@ -1,0 +1,104 @@
+/* --- ESTILOS GENERALES AUTO-SAM --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body > section {
+    flex: 1;
+}
+
+/* Tarjetas de servicios */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+    border-top: 4px solid #0d6efd !important;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(13, 110, 253, 0.15) !important;
+}
+
+/* Fondo para login */
+.login-background-wrapper {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.85) 0%, rgba(13, 202, 240, 0.85) 100%), 
+                url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+    background-size: cover;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* --- BARRA LATERAL (SIDEBAR) AZUL OSCURO --- */
+.wrapper-dashboard {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    min-height: calc(100vh - 70px);
+}
+
+#sidebar {
+    min-width: 260px;
+    max-width: 260px;
+    background: #0f172a; /* Azul más oscuro elegante */
+    color: #fff;
+    transition: all 0.3s;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}
+
+#sidebar.active {
+    margin-left: -260px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a {
+    padding: 10px 15px;
+    font-size: 1.05rem;
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+/* Fondos para paneles internos */
+.panel-cliente-bg {
+    background-color: #f8fafc;
+}
+
+.panel-admin-bg {
+    background-color: #f8fafc;
+}
+
+.table-responsive {
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -260px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}

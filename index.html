@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSam - Taller Mecánico Especializado</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR / NAVEGACIÓN (Solo visible antes de iniciar sesión) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow" id="navbar-publico">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#" onclick="mostrarSeccion('seccion-inicio')">
+                <div class="bg-white text-primary p-2 rounded-3 shadow-sm d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                    <i class="bi bi-car-front-fill fs-4"></i>
+                </div>
+                <span>Auto<span class="text-info">Sam</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link px-3 active" href="#" onclick="mostrarSeccion('seccion-inicio')"><i class="bi bi-house-door-fill me-1"></i> Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#" onclick="mostrarSeccion('seccion-servicios')"><i class="bi bi-gear-fill me-1"></i> Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#" onclick="mostrarSeccion('seccion-sistema')"><i class="bi bi-laptop me-1"></i> Acerca del sistema</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#" onclick="mostrarSeccion('seccion-nosotros')"><i class="bi bi-people-fill me-1"></i> Acerca de nosotros</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-info text-dark fw-bold px-4 py-2 shadow-sm rounded-pill" href="#" onclick="mostrarSeccion('seccion-login')">
+                            <i class="bi bi-box-arrow-in-right me-1"></i> Inicio de sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. VISTA: INICIO (Con cuadro mejorado en tonos azul y negro con contraste perfecto) -->
+    <section id="seccion-inicio" class="vista-seccion container py-5 my-3">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="badge bg-info text-dark mb-3 px-3 py-2 fw-bold rounded-pill">Taller Mecánico Profesional</span>
+                <h1 class="display-4 fw-bold text-dark mb-3">La potencia y seguridad de tu vehículo en manos expertas.</h1>
+                <p class="lead text-muted mb-4">Brindamos diagnóstico preciso, mantenimiento preventivo y soluciones mecánicas rápidas con la más alta calidad y confianza para tu tranquilidad en la vía.</p>
+                <div class="d-flex gap-3">
+                    <button class="btn btn-primary btn-lg px-5 shadow fw-bold rounded-pill" onclick="mostrarSeccion('seccion-login')">Ingresar</button>
+                    <button class="btn btn-outline-primary btn-lg px-4 rounded-pill" onclick="mostrarSeccion('seccion-servicios')">Ver Servicios</button>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-4 p-md-5 rounded-4 shadow-lg text-white" style="background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%); border: 2px solid #3a86ff;">
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold text-white mb-1">¿Por qué elegir AutoSam?</h3>
+                        <p class="text-info small mb-0">Excelencia y compromiso en cada servicio automotriz</p>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="p-3 bg-dark bg-opacity-75 rounded-3 border border-secondary text-center h-100">
+                                <i class="bi bi-shield-check text-info fs-1 mb-2 d-block"></i>
+                                <h6 class="fw-bold text-white mb-0">Garantía</h6>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-dark bg-opacity-75 rounded-3 border border-secondary text-center h-100">
+                                <i class="bi bi-speedometer2 text-info fs-1 mb-2 d-block"></i>
+                                <h6 class="fw-bold text-white mb-0">Rapidez</h6>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-dark bg-opacity-75 rounded-3 border border-secondary text-center h-100">
+                                <i class="bi bi-tools text-info fs-1 mb-2 d-block"></i>
+                                <h6 class="fw-bold text-white mb-0">Expertos</h6>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-dark bg-opacity-75 rounded-3 border border-secondary text-center h-100">
+                                <i class="bi bi-cpu text-info fs-1 mb-2 d-block"></i>
+                                <h6 class="fw-bold text-white mb-0">Tecnología</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-top border-secondary text-center">
+                        <p class="mb-0 text-white-50 small"><i class="bi bi-check-circle-fill text-info me-1"></i> Calidad garantizada en cada mantenimiento con AutoSam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. VISTA: SERVICIOS (5 Cuadros) -->
+    <section id="seccion-servicios" class="vista-seccion container py-5 d-none">
+        <div class="text-center mb-5">
+            <span class="badge bg-primary px-3 py-2 rounded-pill text-white fw-bold mb-2">Nuestros Trabajos</span>
+            <h2 class="fw-bold display-6 text-dark">Servicios Especializados</h2>
+            <p class="text-muted">Soluciones integrales para mantener tu carro al 100% de su rendimiento.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-3 service-card">
+                    <div class="card-body text-center">
+                        <div class="mb-3 text-primary fs-1 bg-light rounded-circle d-inline-flex p-3"><i class="bi bi-oil"></i></div>
+                        <h4 class="card-title fw-bold">Mantenimiento Preventivo</h4>
+                        <p class="card-text text-muted small">Cambio periódico de aceite, filtros de aire, gasolina y revisión completa de niveles de fluidos esenciales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-3 service-card">
+                    <div class="card-body text-center">
+                        <div class="mb-3 text-info fs-1 bg-light rounded-circle d-inline-flex p-3"><i class="bi bi-disc"></i></div>
+                        <h4 class="card-title fw-bold">Frenos y Suspensión</h4>
+                        <p class="card-text text-muted small">Revisión de pastillas, rectificación de discos, amortiguadores y elementos de dirección para máxima seguridad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-3 service-card">
+                    <div class="card-body text-center">
+                        <div class="mb-3 text-primary fs-1 bg-light rounded-circle d-inline-flex p-3"><i class="bi bi-cpu-fill"></i></div>
+                        <h4 class="card-title fw-bold">Diagnóstico por Escáner</h4>
+                        <p class="card-text text-muted small">Detección computarizada de códigos de falla en la computadora del motor y sensores del vehículo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-3 service-card">
+                    <div class="card-body text-center">
+                        <div class="mb-3 text-info fs-1 bg-light rounded-circle d-inline-flex p-3"><i class="bi bi-lightning-charge-fill"></i></div>
+                        <h4 class="card-title fw-bold">Sistema Eléctrico y Baterías</h4>
+                        <p class="card-text text-muted small">Pruebas de alternador, motor de arranque, revisión de cableado y reemplazo de baterías con garantía.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 rounded-4 p-3 service-card">
+                    <div class="card-body text-center">
+                        <div class="mb-3 text-primary fs-1 bg-light rounded-circle d-inline-flex p-3"><i class="bi bi-water"></i></div>
+                        <h4 class="card-title fw-bold">Sistema de Enfriamiento</h4>
+                        <p class="card-text text-muted small">Limpieza de radiadores, cambio de líquido refrigerante y revisión de mangueras para evitar sobrecalentamientos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. VISTA: ACERCA DEL SISTEMA -->
+    <section id="seccion-sistema" class="vista-seccion container py-5 d-none">
+        <div class="text-center mb-5">
+            <span class="badge bg-info px-3 py-2 rounded-pill text-dark fw-bold mb-2">Plataforma Web</span>
+            <h2 class="fw-bold display-6 text-dark">Acerca del Sistema AutoSam</h2>
+            <p class="text-muted">Conoce las funciones principales y la tecnología detrás de la plataforma de gestión.</p>
+        </div>
+        <div class="row g-4 align-items-center">
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0 rounded-4 p-4 text-center h-100">
+                    <i class="bi bi-shield-lock-fill text-primary display-4 mb-3"></i>
+                    <h4 class="fw-bold">Gestión de Roles</h4>
+                    <p class="text-muted small">Control de acceso seguro diferenciando permisos para Clientes (gestión de citas propias) y Administradores (control total).</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0 rounded-4 p-4 text-center h-100">
+                    <i class="bi bi-database-fill-check text-info display-4 mb-3"></i>
+                    <h4 class="fw-bold">Almacenamiento Local</h4>
+                    <p class="text-muted small">Utiliza LocalStorage para conservar registros actualizados de solicitudes, estados de atención y perfiles sin requerir bases de datos externas.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0 rounded-4 p-4 text-center h-100">
+                    <i class="bi bi-phone-fill text-primary display-4 mb-3"></i>
+                    <h4 class="fw-bold">Diseño Responsivo</h4>
+                    <p class="text-muted small">Desarrollado con Bootstrap 5 para garantizar una visualización fluida y adaptada en computadoras, tablets y teléfonos móviles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. VISTA: ACERCA DE NOSOTROS -->
+    <section id="seccion-nosotros" class="vista-seccion container py-5 d-none">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="badge bg-primary px-3 py-2 rounded-pill text-white fw-bold mb-2">Instituto Superior Tecnológico Cordillera</span>
+                <h2 class="fw-bold display-6 text-dark mb-3">¿Quiénes Somos?</h2>
+                <p class="text-muted">Este proyecto web fue desarrollado como parte de las actividades académicas de la carrera de Desarrollo de Software en el prestigioso <strong>Instituto Superior Tecnológico Cordillera</strong>.</p>
+                <p class="text-muted">Somos estudiantes apasionados por la programación web, aplicando buenas prácticas de desarrollo frontend, maquetación semántica, validaciones dinámicas y componentes modernos orientados a solucionar necesidades reales del sector automotriz.</p>
+                <div class="p-3 bg-light border-start border-primary border-4 rounded-end shadow-sm">
+                    <p class="mb-0 fw-semibold text-dark">"Innovación tecnológica y código limpio al servicio de la comunidad estudiantil y profesional."</p>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="p-5 bg-gradient rounded-4 shadow text-black" style="background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);">
+                    <i class="bi bi-mortarboard-fill display-1 mb-3"></i>
+                    <h3 class="fw-bold">Desarrollo de Software</h3>
+                    <p class="mb-0">Programación Web 1 - Unidad 1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. VISTA: INICIO DE SESIÓN -->
+    <section id="seccion-login" class="vista-seccion py-5 d-none login-background-wrapper">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="card shadow-lg border-0 rounded-4 glass-card">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center shadow mb-3" style="width: 70px; height: 70px;">
+                                    <i class="bi bi-car-front-fill fs-2"></i>
+                                </div>
+                                <h3 class="fw-bold text-dark">AutoSam Login</h3>
+                                <p class="text-muted small">Ingresa al portal de mantenimiento automotriz</p>
+                            </div>
+                            <form id="form-login">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold text-secondary">Correo electrónico</label>
+                                    <input type="email" class="form-control form-control-lg bg-light" id="login-email" placeholder="ejemplo@correo.com" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold text-secondary">Contraseña</label>
+                                    <input type="password" class="form-control form-control-lg bg-light" id="login-password" placeholder="••••" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold shadow rounded-pill">Ingresar al Sistema</button>
+                            </form>
+                            <div class="mt-4 p-3 bg-white bg-opacity-75 rounded-3 small text-secondary border">
+                                <p class="mb-1 fw-bold text-dark">Cuentas de prueba disponibles:</p>
+                                <p class="mb-1">👤 <strong>Cliente:</strong> cliente@taller.com / 1234</p>
+                                <p class="mb-0">🛠️ <strong>Admin:</strong> admin@taller.com / 1234</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PANEL INTERNO CON BARRA LATERAL (Sidebar Azul Oscuro Retráctil) -->
+    <div id="contenedor-sistema-interno" class="d-none">
+        <div class="wrapper-dashboard">
+            <!-- SIDEBAR AZUL OSCURO -->
+            <nav id="sidebar" class="sidebar-dark-blue">
+                <div class="sidebar-header p-4 border-bottom border-secondary">
+                    <h4 class="text-white fw-bold m-0 d-flex align-items-center gap-2">
+                        <i class="bi bi-car-front-fill text-info"></i> AutoSam
+                    </h4>
+                    <span class="text-white-50 small" id="sidebar-rol-text">Panel Interno</span>
+                </div>
+                <ul class="list-unstyled components p-3">
+                    <li class="mb-2">
+                        <a href="#" onclick="cambiarVistaPanel('solicitudes')" class="nav-link text-white p-3 rounded bg-primary bg-opacity-25 d-flex align-items-center gap-2" id="menu-link-solicitudes">
+                            <i class="bi bi-speedometer2"></i> <span>Solicitudes</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" onclick="cambiarVistaPanel('perfil')" class="nav-link text-white p-3 rounded d-flex align-items-center gap-2" id="menu-link-perfil">
+                            <i class="bi bi-person-badge"></i> <span>Mi Perfil</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="nav-link text-white p-3 rounded d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                            <i class="bi bi-plus-circle"></i> <span>Nueva Solicitud</span>
+                        </a>
+                    </li>
+                    <li class="mt-4 pt-4 border-top border-secondary">
+                        <a href="#" onclick="cerrarSesion()" class="nav-link text-danger p-3 rounded d-flex align-items-center gap-2 bg-danger bg-opacity-10">
+                            <i class="bi bi-box-arrow-left"></i> <span>Cerrar Sesión</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- CONTENIDO PRINCIPAL DEL PANEL -->
+            <div id="content" class="w-100 p-4">
+                <!-- Botón para abrir/cerrar la barra lateral -->
+                <button type="button" id="sidebarCollapse" class="btn btn-dark mb-4 rounded-pill shadow-sm px-3">
+                    <i class="bi bi-list fs-5"></i> <span class="ms-1">Menú</span>
+                </button>
+
+                <!-- VISTA PANEL CLIENTE (Solicitudes) -->
+                <div id="seccion-panel-cliente" class="vista-panel d-none panel-cliente-bg p-4 shadow-sm rounded-4">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4 bg-primary text-white p-4 rounded-4 shadow">
+                        <div>
+                            <span class="badge bg-info text-dark fw-bold px-3 py-1 mb-1">Portal de Cliente</span>
+                            <h2 class="fw-bold mb-0" id="nombre-cliente-bienvenida">Mis Solicitudes</h2>
+                        </div>
+                        <button class="btn btn-light text-primary fw-bold px-4 shadow-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                            <i class="bi bi-plus-circle-fill me-2"></i> Registrar Nueva
+                        </button>
+                    </div>
+                    <div class="card shadow border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold text-primary mb-3"><i class="bi bi-clipboard-check me-2"></i>Historial de Mantenimientos</h4>
+                            <div id="tabla-cliente-container"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VISTA PERFIL DE USUARIO (Cliente / Admin) -->
+                <div id="seccion-perfil-usuario" class="vista-panel d-none p-4 shadow-sm rounded-4 bg-white">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center shadow mb-3" style="width: 80px; height: 80px;">
+                                    <i class="bi bi-person-fill fs-1"></i>
+                                </div>
+                                <h3 class="fw-bold text-dark" id="perfil-nombre">Nombre de Usuario</h3>
+                                <p class="text-muted" id="perfil-rol">Rol del Sistema</p>
+                            </div>
+                            <hr>
+                            <div class="row g-4 justify-content-center mt-2">
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-light rounded-3 border">
+                                        <p class="mb-1 text-muted small">Correo Electrónico Registrado:</p>
+                                        <h5 class="fw-bold text-dark mb-0" id="perfil-email">correo@ejemplo.com</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-light rounded-3 border">
+                                        <p class="mb-1 text-muted small">Estado de la Cuenta:</p>
+                                        <h5 class="fw-bold text-success mb-0"><i class="bi bi-check-circle-fill me-1"></i> Activa / Conectado</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VISTA PANEL ADMIN (Verde) -->
+                <div id="seccion-panel-admin" class="vista-panel d-none panel-admin-bg p-4 shadow-sm rounded-4">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4 bg-success text-white p-4 rounded-4 shadow">
+                        <div>
+                            <span class="badge bg-light text-success fw-bold px-3 py-1 mb-1">Portal de Administrador</span>
+                            <h2 class="fw-bold mb-0">Control General de Solicitudes</h2>
+                        </div>
+                        <button class="btn btn-light text-success fw-bold px-4 shadow-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                            <i class="bi bi-plus-circle-fill me-2"></i> Registrar Solicitud (Admin)
+                        </button>
+                    </div>
+                    <div class="card shadow border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold text-success mb-3"><i class="bi bi-list-columns-reverse me-2"></i>Todas las Solicitudes del Taller</h4>
+                            <div id="tabla-admin-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PARA REGISTRAR SOLICITUD -->
+    <div class="modal fade" id="modalSolicitud" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header bg-primary text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold"><i class="bi bi-car-front me-2"></i>Nueva Solicitud de Mantenimiento</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="form-solicitud">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Placa del Vehículo</label>
+                                <input type="text" class="form-control" id="placa" placeholder="Ej: ABC-1234" required>
+                                <div class="form-text">Formato obligatorio: 3 letras, guion y 4 números.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Marca</label>
+                                <input type="text" class="form-control" id="marca" placeholder="Ej: Chevrolet" minlength="2" maxlength="30" required>
+                                <div class="form-text">Mínimo 2, máximo 30 caracteres.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Modelo</label>
+                                <input type="text" class="form-control" id="modelo" placeholder="Ej: Aveo Emotion" minlength="2" maxlength="30" required>
+                                <div class="form-text">Mínimo 2, máximo 30 caracteres.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Año</label>
+                                <input type="number" class="form-control" id="anio" min="1950" max="2026" placeholder="2020" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Kilometraje</label>
+                                <input type="number" class="form-control" id="kilometraje" min="0" max="999999" placeholder="45000" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Tipo de Servicio</label>
+                                <select class="form-select" id="servicio" required>
+                                    <option value="">Seleccione un servicio...</option>
+                                    <option value="Mantenimiento Preventivo">Mantenimiento Preventivo</option>
+                                    <option value="Frenos y Suspensión">Frenos y Suspensión</option>
+                                    <option value="Diagnóstico por Escáner">Diagnóstico por Escáner</option>
+                                    <option value="Sistema Eléctrico y Baterías">Sistema Eléctrico y Baterías</option>
+                                    <option value="Sistema de Enfriamiento">Sistema de Enfriamiento</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Fecha de Cita</label>
+                                <input type="date" class="form-control" id="fecha" required>
+                                <div class="form-text">No se permiten fechas anteriores al día de hoy.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Hora de Cita</label>
+                                <input type="time" class="form-control" id="hora" min="08:00" max="22:00" required>
+                                <div class="form-text">Horario disponible de 08:00 AM a 10:00 PM (22:00).</div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Observaciones / Detalles</label>
+                                <textarea class="form-control" id="observaciones" rows="3" maxlength="200" placeholder="Ej: El carro vibra un poco al frenar..."></textarea>
+                                <div class="form-text">Máximo 200 caracteres.</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-end">
+                            <button type="button" class="btn btn-secondary px-4 rounded-pill" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary px-4 fw-bold rounded-pill">Guardar Solicitud</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-5" id="footer-principal">
+        <div class="container">
+            <p class="mb-0 text-muted">&copy; 2026 Taller Automotriz AutoSam - Instituto Superior Tecnológico Cordillera</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Script principal -->
+    <script src="js/script.js"></script>
+</body>
+</html>
